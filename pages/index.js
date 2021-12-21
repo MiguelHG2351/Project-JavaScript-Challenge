@@ -12,9 +12,9 @@ export default function Home() {
         <Container>
             <h2>JavaScript challenge</h2>
             <CardContainer>
-                <Card background='#25a08d' type='Herbívoro' />
-                <Card background='#07739a' type='Omnivoro'/>
-                <Card background='#95440c' type='Carnivoro'/>
+                <Card background='#25a08d' url='/dinos/herbivorous' type='Herbívoro' />
+                <Card background='#07739a' url='/dinos/Omnivore' type='Omnivoro'/>
+                <Card background='#95440c' url='/dinos/Carnivorous' type='Carnivoro'/>
             </CardContainer>
         </Container>
     </>
