@@ -68,6 +68,18 @@ model dino {
   length String
 }
 
+model dinos {
+  id  String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  name String
+  description String
+  image String
+  diet String
+  live String
+  found String
+  type String
+  length String
+}
+
 model dinoName {
   id  String    @id @default(dbgenerated()) @map("_id") @db.ObjectId
   name String

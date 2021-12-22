@@ -16,16 +16,21 @@ export const HeaderContainer = styled.div`
     align-items: center;
 `
 
-export const HeaderLeft = styled.div`
+export const HeaderLeft = styled.a`
     display: flex;
     align-items: center;
     gap: 0 20px;
+    cursor: pointer;
 `
 
 export const HeaderRight = styled.div`
     display: flex;
     align-items: center;
     gap: 0 20px;
+
+    .signin {
+        cursor: pointer;
+    }
     
     path {
         color: var(--blue-text);

@@ -9,6 +9,7 @@ export const Container = styled.a`
     background-color: ${props => props.background};
     background-blend-mode: multiply;
     transition: transform 0.18s ease-in-out;
+    cursor: pointer;
 
     &:hover {
         transform: scale(1.05);

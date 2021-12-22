@@ -1,7 +1,7 @@
 // 
 // https://www.gameuidatabase.com/uploads/JurassicWorldEvolution04242020-083705.jpg
 // https://www.gameuidatabase.com/uploads/JurassicWorldEvolution04242020-083736.jpg
-// https://www.gameuidatabase.com/uploads/JurassicWorldEvolution04242020-083037_thumb.jpgc
+// https://www.gameuidatabase.com/uploads/JurassicWorldEvolution04242020-083037_thumb.jpg
 const puppeteer = require('puppeteer');
 
 async function getData() {

@@ -32,8 +32,12 @@ export default NextAuth({
             // console.log("signIn", user, account, profile);
             return user;
         },
-        redirect() {
-            return process.env.BASE_URL
+        redirect({ url, baseUrl }) {
+            console.log("redirect", url, baseUrl);
+            if (url.startsWith(baseUrl)) return url
+            // Allows relative callback URLs
+            else if (url.startsWith("/")) return new URL(url, baseUrl).toString()
+            return process.env.BASE_URL + url
         }
     }
 });

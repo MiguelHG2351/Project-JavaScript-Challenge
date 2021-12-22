@@ -1,7 +1,8 @@
 import { ApolloServer } from 'apollo-server-micro'
 import Cors from 'micro-cors'
-import schema from 'services/graphql/schemas'
-import resolvers from 'services/graphql/resolvers'
+import schema from 'Graphql/schemas'
+import resolvers from 'Graphql/resolvers'
+import PrismaLib from 'lib/prisma'
 
 const cors = Cors()
 
@@ -12,13 +13,24 @@ export const config = {
 }
 
 const apolloServer = new ApolloServer({
-    schema,
-    resolvers
+    typeDefs: schema,
+    resolvers,
+    context: ({ req }) => {
+        return {
+            prisma: new PrismaLib()
+        }
+    },
+    introspection: process.env.NODE_ENV !== 'production',
 })
 
 const server = apolloServer.start()
 
-export default cors(function(req, res) {
-    
+export default cors(async function(req, res) {
+    if(req.method === 'OPTIONS') {
+        res.end()
+    }
+    await server;
+    await apolloServer.createHandler({
+        path: '/api/graphql'
+    })(req, res)
 })
-

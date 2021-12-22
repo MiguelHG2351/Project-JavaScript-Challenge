@@ -25,10 +25,12 @@ export default function Header_() {
     return (
         <Header>
             <HeaderContainer>
-                <HeaderLeft>
-                    <VectorLogo />
-                    <p>LearnDino</p>
-                </HeaderLeft>
+                <Link href='/'>
+                    <HeaderLeft>
+                        <VectorLogo />
+                        <p>LearnDino</p>
+                    </HeaderLeft>
+                </Link>
                 <HeaderRight>
                     {status === "authenticated" ? (
                     <Tooltip title="Profile" onClick={handleClick}>
@@ -38,7 +40,7 @@ export default function Header_() {
                     </Tooltip>
                     ) : (
                         <Link href="/api/auth/signin">
-                            <LinkUI>
+                            <LinkUI className='signin'>
                                 Signin
                             </LinkUI>    
                         </Link>

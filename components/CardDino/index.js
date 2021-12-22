@@ -2,14 +2,14 @@ import { Container, HeaderCard, CardInfo, CardDescription, HeaderImage, CardCont
 import Link from 'next/link'
 import { Divider } from '@mui/material'
 
-export default function CardDino({ name, live, url, description, found, length, type }) {
+export default function CardDino({ name, live, image, url, description, found, length, type }) {
     return (
         <>
             <Link href={url}>
                 <Container borderColor='blue'>
                     <HeaderCard>
                         <CardInfo align="center">
-                            <HeaderImage width={128} src="https://www.twilight-zone.nl/WebRoot/Pins/Shops/Twilightzone/5DE8/E6F3/CC18/351A/F99E/0A0C/05BA/7B40/P1SLMCJP02_01.jpg" 
+                            <HeaderImage src={image} 
                             alt="user-avatar"
                             />
                             <CardDescription align="center">
