@@ -43,12 +43,12 @@ function Herbivorous() {
         if(!isNearScreen) return;
         fetchMore({
             variables: {
-                offset: data.allDinos.length
+                offset: data.allTypeDino.length
             },
             updateQuery: (prev, { fetchMoreResult }) => {
                 if(!fetchMoreResult) return prev;
                 return Object.assign({}, prev, {
-                    allDinos: [...prev.allDinos, ...fetchMoreResult.allDinos]
+                    allTypeDino: [...prev.allTypeDino, ...fetchMoreResult.allTypeDino]
                 })
             }
         })
