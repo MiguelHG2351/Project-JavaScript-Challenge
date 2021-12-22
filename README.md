@@ -2,6 +2,8 @@
 
 En este proyecto puedes encontrar información sobre dinossauros, si inicias sesión puedes agregar a favoritos (tengo más ideas planeadas antes que termine el año)
 
+Los datos de los dinosaurios pertenecen a Natural History Museum. Con puppeteer obtuve los datos de los dinosaurios y los guardé en una base de datos.
+
 ## Pendiente:
 
 - Implementar Redux
