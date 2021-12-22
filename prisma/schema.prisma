@@ -66,6 +66,7 @@ model dino {
   found String
   type String
   length String
+  color String
 }
 
 model dinos {
@@ -78,6 +79,7 @@ model dinos {
   found String
   type String
   length String
+  color String
 }
 
 model dinoName {

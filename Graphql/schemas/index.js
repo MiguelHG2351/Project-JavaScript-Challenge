@@ -15,5 +15,9 @@ export default gql`
 
     type Query {
         allDinos(offset: Int, limit: Int): [Dino]
+        allTypeDino(offset: Int, limit: Int, diet: String): [Dino]
+        allOmnivorous(offset: Int, limit: Int): [Dino]
+        allHerbivorous(offset: Int, limit: Int): [Dino]
+        allCarnivorous(offset: Int, limit: Int): [Dino]
     }
 `
