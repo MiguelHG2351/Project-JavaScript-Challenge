@@ -69,7 +69,7 @@ function Herbivorous() {
                             )
                         })
                     ) : (
-                            Array(10).fill(0).map((_, index) => (
+                            Array(40).fill(0).map((_, index) => (
                                 <CardDinoSkeleton key={index} />
                             ))
                         )
